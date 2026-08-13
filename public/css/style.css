@@ -1,0 +1,388 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px;
+    color: #333;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 25px;
+    padding: 35px 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4a64b8;
+    margin: 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background: white;
+    color: #4b5563;
+    font-weight: 600;
+    border: 2px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #667eea;
+    border-color: #667eea;
+    background: #f4f6ff;
+    transform: translateY(-2px);
+}
+
+.nav-btn.active {
+    color: white;
+    border-color: transparent;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 5px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* =========================
+   ADD STUDENT BUTTON
+========================= */
+main > div:first-child .btn-update {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(102, 126, 234, 0.25);
+}
+
+main > div:first-child .btn-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(102, 126, 234, 0.35);
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+}
+
+thead tr {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+thead th {
+    padding: 15px 18px;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+thead th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+thead th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+tbody tr {
+    background: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.14);
+}
+
+tbody td {
+    padding: 15px 18px;
+    vertical-align: middle;
+}
+
+tbody td:first-child {
+    border-radius: 12px 0 0 12px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+tbody td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* =========================
+   BUTTON UPDATE & DELETE
+========================= */
+.btn-update,
+.btn-delete {
+    border: none;
+    border-radius: 9px;
+    padding: 8px 15px;
+    min-width: 90px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-update {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-update a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-update:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-delete {
+    background: white;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.btn-delete:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* IMPORTANT: form delete dalam table */
+td form {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    max-width: none;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.12);
+}
+
+.form-title {
+    text-align: center;
+    color: #4a64b8;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #4a64b8;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #dbe3f1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+}
+
+form > button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+}
+
+/* =========================
+   ALERT
+========================= */
+.alert {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    border-left: 5px solid #22c55e;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 5px solid #ef4444;
+}
+
+/* FIX PAGINATION LARAVEL */
+.pagination-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-container nav {
+    width: 100%;
+}
+
+/* Kecilkan arrow Laravel */
+.pagination-container svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Pagination links */
+.pagination-container a,
+.pagination-container span {
+    font-size: 14px;
+}
+
+/* Betulkan bahagian pagination */
+.pagination-container nav > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide ayat Showing 1 to 25 of 100 results */
+.pagination-container nav > div:first-child {
+    display: none;
+}
+
+/* Button pagination */
+.pagination-container nav > div:last-child {
+    width: 100%;
+}
+
+.pagination-container nav > div:last-child > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    thead th,
+    tbody td {
+        padding: 12px 10px;
+    }
+}
